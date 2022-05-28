@@ -48,7 +48,6 @@ const char *words[WORDS_SIZE] = {
 int x[] = {-1, -1, -1, 0, 0, 1, 1, 1};
 int y[] = {-1, 0, 1, -1, 1, -1, 0, 1};
 
-
 bool searchIn2D(char *grid, int row, int col, string word)
 {
     char *puz = NULL;
@@ -56,7 +55,9 @@ bool searchIn2D(char *grid, int row, int col, string word)
 
     // Find alphabet word from puzzle.
     if (*(grid + row * C + col) != word[0])
+    {
         return false;
+    }
 
     // store first location of the word
     int puz_mem = 0;
@@ -136,7 +137,9 @@ int main()
     for (int i = 0; i < ROW_SIZE; i++)
     {
         for (int j = 0; j < COLUMN_SIZE; j++)
+        {
             cout << puzzle[i][j] << " ";
+        }
         cout << endl;
     }
 
